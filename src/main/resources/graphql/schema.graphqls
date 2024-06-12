@@ -1,0 +1,27 @@
+type Query {
+    findAll: [Scrobble]!
+    scrobbleById(utc_time: String!, trackId: ID!): Scrobble
+}
+
+type Scrobble{
+    uts: String!,
+    utcTime: String!
+    artist: Artist!
+    album: Album!
+    track: Track!
+
+}
+type Artist{
+    artistName: String!,
+    artistId: ID!
+}
+
+type Album{
+    albumName: String!,
+    albumId: ID!
+}
+
+type Track{
+    trackName: String!,
+    trackId: ID!
+}
